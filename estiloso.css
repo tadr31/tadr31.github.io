@@ -1,0 +1,112 @@
+/* Reset básico */
+/** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body {
+	/*background-image: url(./recursos/imagens/protótipo.png); 
+    background-attachment: fixed;
+    background-size: 160px; */
+}
+
+
+.lista_accordion {
+	display:none;
+	flex-direction:column;
+}
+
+.ativo {
+	display: flex;
+}
+
+.largura-padrao:{
+	max-width:100%;
+}
+
+/* Layout responsivo */
+header, footer {
+    padding: 20px;
+    max-width: 720px;
+    margin-inline:auto;
+}
+
+main {
+	padding: 20px;
+}
+
+/*
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0080ff;
+}
+
+nav a:visited {
+    text-decoration: none;
+    color: #0080ff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #0080ff;
+}
+
+nav a:active {
+    text-decoration: none;
+    color: lime;
+} */
+
+.accordion {
+/*	background-color: #00004460;
+	color: #ffff00; */
+	cursor: pointer;
+/*	padding: 18px;
+	width: 100%;
+	text-align: left; */
+	border: none;
+	outline: none;
+	transition: 0.6s;
+}
+/*
+.active, .accordion:hover {
+  background-color: #22226660;
+}
+*/
+/* Media queries para diferentes tamanhos de tela */
+
+@media (max-width: 768px) {
+ /*   nav ul {
+        flex-direction: column;
+        gap: 10px;
+    } */
+    
+    header, button {
+		max-width:100%;
+        text-align: left; /*center*/
+    }
+    
+    .largura-padrao {
+		max-width:700px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+	
+    p {
+        font-size: 0.9rem;
+    }
+    
+    .largura-padrao{
+		max-width:400px;
+    }
+}
